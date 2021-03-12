@@ -11,7 +11,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: cert-manager
-  namespace: flux-system
+  namespace: default
 spec:
   interval: 5m
   chart:
@@ -23,5 +23,3 @@ spec:
         name: jetstack
         namespace: flux-system
       interval: 1m
-  createNamespace: true
-  values:
